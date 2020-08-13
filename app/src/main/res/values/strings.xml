@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Shrine</string>
+    <string name="labelName">Name</string>
+    <string name="labeladdress">Address</string>
+    <string name="labelCity">City</string>
+    <string name="labelSstate">State</string>
+    <string name="filter">Filter</string>
+    <string name="search">Search</string>
+</resources>

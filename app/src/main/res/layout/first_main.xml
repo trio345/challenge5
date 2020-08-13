@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:context=".FirstActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="@dimen/space_default">
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:padding="30dp"
+           android:layout_height="wrap_content">
+           <com.google.android.material.textfield.TextInputLayout
+               android:id="@+id/firstName"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="@string/labelName"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:layout_width="match_parent"
+                   android:inputType="text"
+                   android:imeOptions="actionNext"
+                   android:layout_height="wrap_content"
+                   />
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <com.google.android.material.textfield.TextInputLayout
+               app:layout_constraintTop_toBottomOf="@+id/firstName"
+               android:id="@+id/address"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/space_default"
+               android:hint="@string/labeladdress"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:layout_width="match_parent"
+                   android:inputType="text"
+                   android:imeOptions="actionNext"
+                   android:layout_height="wrap_content"
+                   />
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <com.google.android.material.textfield.TextInputLayout
+               app:layout_constraintTop_toBottomOf="@+id/address"
+               android:id="@+id/city"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/space_default"
+               android:hint="@string/labelCity"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:layout_width="match_parent"
+                   android:inputType="text"
+                   android:imeOptions="actionNext"
+                   android:layout_height="wrap_content"
+                   />
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <com.google.android.material.textfield.TextInputLayout
+               app:layout_constraintTop_toBottomOf="@+id/city"
+               android:id="@+id/state"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/space_default"
+               android:hint="@string/labelSstate"
+               app:layout_constraintEnd_toStartOf="@id/zip"
+               app:layout_constraintStart_toStartOf="parent"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:layout_width="match_parent"
+                   android:inputType="text"
+                   android:imeOptions="actionNext"
+                   android:layout_height="wrap_content"
+                   />
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <com.google.android.material.textfield.TextInputLayout
+               app:layout_constraintTop_toBottomOf="@id/city"
+               android:id="@+id/zip"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="@dimen/space_default"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toEndOf="@id/state"
+               android:hint="ZIP"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   />
+           </com.google.android.material.textfield.TextInputLayout>
+           <com.google.android.material.button.MaterialButton
+                app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/zip"
+               android:layout_marginTop="30dp"
+               android:id="@+id/containedButton"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:imeOptions="actionSend"
+               app:cornerRadius="5dp"
+               android:elevation="10dp"
+               android:text="Save"
+               />
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</LinearLayout>

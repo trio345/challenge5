@@ -1,13 +1,16 @@
 package id.co.mdd.shrine;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -29,14 +32,12 @@ public class ThirdActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
-        rvStore = findViewById(R.id.rvUsers);
+        rvStore = findViewById(R.id.rvStore);
 
         storeAdapter = new StoreAdapter();
-        GridLayout gridLayout = new GridLayout(this);
-        gridLayout.setOrientation(GridLayout.VERTICAL);
-
-
-
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
+        gridLayoutManager.setOrientation(GridLayoutManager.VERTICAL);
+        rvStore.setLayoutManager(gridLayoutManager);
 
         if (getSupportActionBar() != null){
             getSupportActionBar().setTitle("Shrine");
@@ -55,6 +56,7 @@ public class ThirdActivity extends AppCompatActivity {
                         rvStore.setAdapter(storeAdapter);
                     }
                 }
+
             }
 
             @Override

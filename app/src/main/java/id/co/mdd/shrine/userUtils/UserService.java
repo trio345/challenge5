@@ -9,6 +9,6 @@ import retrofit2.http.GET;
 
 public interface UserService {
 
-    @GET("products")
+    @GET("/products")
     Call<ArrayList<StoreModel>> getDataStore();
 }
